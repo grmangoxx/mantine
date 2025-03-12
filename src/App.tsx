@@ -1,13 +1,14 @@
-import '@mantine/core/styles.css';
-
 import { MantineProvider } from '@mantine/core';
-import { Router } from './Router';
-import { theme } from './theme';
+import '@mantine/core/styles.css';
+import { Router } from './Router'; // Import Router component
+import './firebaseConfig';
 
-export default function App() {
+function App() {
   return (
-    <MantineProvider theme={theme}>
-      <Router />
+    <MantineProvider defaultColorScheme="dark">
+      <Router /> {/* Use Router component */}
     </MantineProvider>
   );
 }
+
+export default App;
